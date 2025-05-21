@@ -7,7 +7,7 @@ const hasFireAbility = true;
 
 export {};
 */
-
+/*
 class Player {
   name: string;
   health: number;
@@ -31,3 +31,4 @@ peach.isInvincible = true;
 
 mario.greet()
 peach.greet()
+/*
