@@ -1,3 +1,4 @@
+/*
 class Player {
   private health: number
   private speed: number
@@ -30,3 +31,4 @@ mario.setSpeed(1)
 
 console.log(`Mario has ${mario.getHealth()}/10 health.`);
 console.log(`Mario has ${mario.getSpeed()}/10 speed.`);
+*/
