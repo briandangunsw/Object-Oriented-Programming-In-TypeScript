@@ -39,17 +39,26 @@ class Peach extends Character {
 }
 */
 
-class Hero {
+abstract class Hero {
   hunger: number
   health: number
 
+  abstract attack(): void;
+
+  move(): void {
+    console.log("I'm moving");
+  }
+  /*
   attack() {
     console.log("I'm attacking");
   }
+  */
 
+  /*
   move() {
     console.log("I'm moving")
   }
+  */
 
   eat() {
     console.log("I'm eating");
@@ -57,18 +66,40 @@ class Hero {
 
 }
 
+abstract class Mage extends Hero {
+  mana: number;
+}
+
+class Wizard extends Mage {
+  attack() {
+    this.mana -= 1
+    console.log("Wizard attacks");
+  }
+}
+
+class Witch extends Mage {
+  attack() {
+    this.mana -= 1
+    console.log("Witch attacks");
+  }
+}
+
+const wizard = new Wizard();
+const witch = new Witch();
+wizard.attack();
+witch.attack();
+/*
 // A extends B
 // A IS-A B
 // Archer ISA Hero
 class Archer extends Hero {
   arrows: number
   attack() {
-    super.attack()
+    //super.attack()
     console.log("Firing an arrow")
     this.arrows -= 1
   }
 }
-
 class Mage extends Hero {
   mana: number
 
@@ -79,15 +110,27 @@ class Mage extends Hero {
   }
 }
 
-class Knight extends Hero {
+class Knight extends Hero { // concrete class
   shield: number
 
   attack() {
-    super.attack()
+    //super.attack()
     console.log("I'm swinging with a sword")
   }
 }
 
+const archer: Archer = new Archer()
+const knight: Knight = new Knight()
+
+const heros: Hero[] = [archer, knight]
+
+for (let hero of heros) {
+  hero.attack();
+}
+//const bob: Hero = new Hero();
+
+
+/*
 class Wizard extends Mage {}
 class Witch extends Mage {}
 
@@ -99,7 +142,7 @@ const knight: Hero = new Knight()
 archer.attack();
 mage.attack();
 knight.attack();
-*/
+
 class Tribe {
   private heros: Hero[]
 
@@ -140,3 +183,4 @@ const thief = new Theif()
 const heros2: Hero[] = [knight, thief, mage];
 const tribe2 = new Tribe()
 tribe2.setHeros(heros2)
+*/
