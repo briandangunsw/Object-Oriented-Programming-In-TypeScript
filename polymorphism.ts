@@ -38,7 +38,7 @@ class Peach extends Character {
   }
 }
 */
-
+/*
 abstract class Hero {
   hunger: number
   health: number
@@ -58,7 +58,7 @@ abstract class Hero {
   move() {
     console.log("I'm moving")
   }
-  */
+  
 
   eat() {
     console.log("I'm eating");
