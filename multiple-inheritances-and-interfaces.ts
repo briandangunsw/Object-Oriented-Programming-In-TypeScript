@@ -28,7 +28,7 @@ class Spy implements Hero, Enemy {
 
 const hero: Hero = new Spy()
 const enemy: Enemy = new Spy()
-*/
+
 
 // 1. basic classes
 // 2. subclasses
@@ -49,3 +49,5 @@ abstract class Mage implements Hero {}
 
 class Wizard extends Mage {}
 class Witch extends Mage {}
+
+*/
